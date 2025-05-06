@@ -5,14 +5,14 @@ export default function HomePage() {
   const navigate = useNavigate();
 
   function handleNavigate() {
-    navigate("/products");
+    navigate("products");
   }
 
   return (
     <>
       <h1>My Home Page</h1>
       <p>
-        Go to <Link to='/products'>the list of produts</Link>
+        Go to <Link to='products'>the list of produts</Link>
       </p>
       <p>
         <button onClick={handleNavigate}>Navigate</button>

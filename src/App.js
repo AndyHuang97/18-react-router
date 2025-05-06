@@ -24,10 +24,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     errorElement: <ErrorPage />,
-    children: [ // => element acts as wrapper
-      { path: "/", element: <HomePage /> },
-      { path: "/products", element: <ProductsPage /> },
-      { path: "/products/:productId", element: <ProductDetails /> },
+    children: [
+      // => element acts as wrapper
+      // if you use "/" before your actual path, you are using absolute path semantics
+      // if you remove "/" you are using relative path semantics, and your path will
+      // be appended after your parent path
+      { path: "", element: <HomePage /> },
+      { path: "products", element: <ProductsPage /> },
+      { path: "products/:productId", element: <ProductDetails /> },
     ],
   },
   // {
